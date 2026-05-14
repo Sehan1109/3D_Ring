@@ -1,11 +1,10 @@
-import { 
-  Circle, 
-  Diamond, 
-  Square, 
-  Heart, 
-  Hexagon, 
+import {
+  Circle,
+  Diamond,
+  Square,
+  Heart,
+  Hexagon,
   Info,
-  ChevronRight,
   Gem
 } from 'lucide-react';
 
@@ -63,19 +62,19 @@ export default function Configurator({
   return (
     <aside className="config-sidebar">
       <div className="tabs-header">
-        <button 
+        <button
           className={`tab-btn ${activeTab === 'shank' ? 'active' : ''}`}
           onClick={() => setActiveTab('shank')}
         >
           <Circle size={14} /> SHANK
         </button>
-        <button 
+        <button
           className={`tab-btn ${activeTab === 'head' ? 'active' : ''}`}
           onClick={() => setActiveTab('head')}
         >
           <Diamond size={14} /> HEAD
         </button>
-        <button 
+        <button
           className={`tab-btn ${activeTab === 'stone' ? 'active' : ''}`}
           onClick={() => setActiveTab('stone')}
         >
@@ -86,18 +85,18 @@ export default function Configurator({
       <div className="config-content">
         <div className="config-section">
           <div className="section-title">
-            <h3>SHAPE <span style={{fontWeight: 400, color: '#86868b'}}>{selectedShape}</span></h3>
+            <h3>SHAPE <span style={{ fontWeight: 400, color: '#86868b' }}>{selectedShape}</span></h3>
             <span className="price-label">$400</span>
           </div>
           <div className="shape-grid">
             {shapes.map(shape => (
-              <div 
-                key={shape.id} 
+              <div
+                key={shape.id}
                 className={`shape-item ${selectedShape.toLowerCase() === shape.id ? 'active' : ''}`}
                 onClick={() => setSelectedShape(shape.name)}
               >
                 <div className="shape-icon-placeholder">{shape.icon}</div>
-                <span style={{fontSize: '10px', marginTop: '4px'}}>{shape.name}</span>
+                <span style={{ fontSize: '10px', marginTop: '4px' }}>{shape.name}</span>
               </div>
             ))}
           </div>
@@ -107,12 +106,12 @@ export default function Configurator({
           <div className="section-title">
             <h3>CARAT <span className="value-label">{carat}</span></h3>
           </div>
-          <input 
-            type="range" 
-            min="0.5" 
-            max="5" 
-            step="0.1" 
-            value={carat} 
+          <input
+            type="range"
+            min="0.5"
+            max="5"
+            step="0.1"
+            value={carat}
             onChange={(e) => setCarat(parseFloat(e.target.value))}
             className="custom-slider"
           />
@@ -131,19 +130,19 @@ export default function Configurator({
             <h3>TYPE <span className="value-label">{stoneType}</span></h3>
           </div>
           <div className="toggle-group">
-            <button 
+            <button
               className={`toggle-btn ${stoneType === 'Colorless' ? 'active' : ''}`}
               onClick={() => setStoneType('Colorless')}
             >
               Colorless
             </button>
-            <button 
+            <button
               className={`toggle-btn ${stoneType === 'Colored' ? 'active' : ''}`}
               onClick={() => setStoneType('Colored')}
             >
               Colored
             </button>
-            <button 
+            <button
               className={`toggle-btn ${stoneType === 'Gemstone' ? 'active' : ''}`}
               onClick={() => setStoneType('Gemstone')}
             >
@@ -156,7 +155,7 @@ export default function Configurator({
           <div className="config-section">
             <div className="swatch-group">
               {colors.map(c => (
-                <div 
+                <div
                   key={c.id}
                   className={`swatch ${selectedColor === c.id ? 'active' : ''}`}
                   style={{ backgroundColor: c.color }}
