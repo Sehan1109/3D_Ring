@@ -44,9 +44,8 @@ function App() {
           />
         </div>
 
-        {/* Center: 3D Viewer */}
         <div className={`layout-section viewer-section-wrapper ${mobileTab === 'viewer' ? 'mobile-active' : ''}`}>
-          <Viewer selectedColor={selectedColor} />
+          <Viewer selectedColor={selectedColor} selectedShape={selectedShape} />
         </div>
 
         {/* Right Side: Summary */}

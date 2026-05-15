@@ -3,7 +3,6 @@ import {
   Diamond,
   Square,
   Heart,
-  Hexagon,
   Info,
   Gem
 } from 'lucide-react';
@@ -25,13 +24,7 @@ const shapes = [
   { id: 'round', name: 'Round', icon: <Circle size={24} /> },
   { id: 'emerald', name: 'Emerald', icon: <Square size={24} /> },
   { id: 'oval', name: 'Oval', icon: <Gem size={24} /> },
-  { id: 'pear', name: 'Pear', icon: <Gem size={24} /> },
-  { id: 'cushion', name: 'Cushion', icon: <Square size={24} /> },
-  { id: 'radiant', name: 'Radiant', icon: <Diamond size={24} /> },
-  { id: 'marquise', name: 'Marquise', icon: <Diamond size={24} /> },
-  { id: 'princess', name: 'Princess', icon: <Square size={24} /> },
   { id: 'heart', name: 'Heart', icon: <Heart size={24} /> },
-  { id: 'asscher', name: 'Asscher', icon: <Hexagon size={24} /> },
 ];
 
 const colors = [
